@@ -16,6 +16,11 @@ public class LevelGenerator : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        for (int i = 0; i < initialAmount; i++)
+        {
+            GenerateLevelPart();
+        }
     }
     
     void Update()
@@ -29,5 +34,23 @@ public class LevelGenerator : MonoBehaviour
     void GenerateLevelPart()
     {
         int randomNum = Random.Range(0, levelParts.Length);
+        GameObject level = Instantiate(levelParts[randomNum], finalPoint.position, Quaternion.identity);
+        finalPoint = SearchFinalPoint(level,"FinalPoint");
+    }
+
+    private Transform SearchFinalPoint(GameObject levelPart, string tag)
+    {
+        Transform point = null;
+
+        foreach (Transform location in levelPart.transform)
+        {
+            if (location.CompareTag(tag))
+            {
+                point = location;
+                break;
+            }
+        }
+
+        return point;
     }
 }
