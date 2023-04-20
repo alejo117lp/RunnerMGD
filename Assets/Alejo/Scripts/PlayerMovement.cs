@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!Input.GetButtonDown("Jump") || !isGrounded) return;
         m_Rigidbody.AddForce(jumpForce, ForceMode2D.Impulse);
+        Debug.Log("Salto");
         isGrounded = false;
     }
 
