@@ -17,14 +17,21 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        PlayerInputs();
+        JumpInput();
+        Attack();
     }
 
-    private void PlayerInputs()
+    private void JumpInput()
     {
         if (!Input.GetButtonDown("Jump") || !isGrounded) return;
         m_Rigidbody.AddForce(jumpForce, ForceMode2D.Impulse);
         isGrounded = false;
+    }
+
+    private void Attack() {
+        if (Input.GetButtonDown("Fire1")) {
+            Debug.Log("ataca");
+        }
     }
     
     private void OnCollisionEnter2D(Collision2D col)
