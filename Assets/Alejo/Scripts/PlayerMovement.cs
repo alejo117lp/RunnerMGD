@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.Animations;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Vector2 jumpForce = new Vector2(0,5);
     private Rigidbody2D m_Rigidbody;
     [SerializeField] private bool isGrounded = false;
+    [SerializeField] private Animator playerAnim;
     
     
     private void Awake()
@@ -25,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!Input.GetButtonDown("Jump") || !isGrounded) return;
         m_Rigidbody.AddForce(jumpForce, ForceMode2D.Impulse);
+        //
         Debug.Log("Salto");
         isGrounded = false;
     }
