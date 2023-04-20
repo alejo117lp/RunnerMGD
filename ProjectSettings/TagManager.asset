@@ -49,3 +49,6 @@ TagManager:
   - name: Piso
     uniqueID: 4243599913
     locked: 0
+  - name: Shuriken
+    uniqueID: 1695498297
+    locked: 0

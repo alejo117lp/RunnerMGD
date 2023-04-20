@@ -11,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D m_Rigidbody;
     [SerializeField] private bool isGrounded = false;
     [SerializeField] private Animator playerAnim;
+    [SerializeField] ProjectileBehaviour projectilePrefab;
+    [SerializeField] Transform projectileSpawn;
+    [SerializeField] float projectileCooldown;
+    [SerializeField] private bool isAvailable;
     private bool isJumping = false;
 
 
@@ -18,11 +22,12 @@ public class PlayerMovement : MonoBehaviour
     {
         m_Rigidbody = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
+        isAvailable = true;
     }
     void Update()
     {
         JumpInput();
-        Attack();
+        Actions();
     }
 
     private void JumpInput()
@@ -35,11 +40,17 @@ public class PlayerMovement : MonoBehaviour
         playerAnim.SetBool("isJumping", true);
     }
 
-    private void Attack()
+    private void Actions()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && isAvailable == true)
         {
-            Debug.Log("ataca");
+            Instantiate(projectilePrefab, projectileSpawn.position, transform.rotation);
+            isAvailable = false;
+            StartCoroutine(StartCooldown());
+            Debug.Log("Ataca");
+        }
+        if (Input.GetButtonDown("Fire2")) {
+            Debug.Log("Esquiva");
         }
     }
 
@@ -54,4 +65,9 @@ public class PlayerMovement : MonoBehaviour
             playerAnim.SetBool("isJumping", false);
         }
     }
+
+    public IEnumerator StartCooldown() {
+            yield return new WaitForSeconds(projectileCooldown);
+            isAvailable = true;
+    }   
 }
