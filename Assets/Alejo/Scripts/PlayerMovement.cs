@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D m_Rigidbody;
     [SerializeField] private bool isGrounded = false;
     [SerializeField] private Animator playerAnim;
+    [SerializeField] ProjectileBehaviour projectilePrefab;
+    [SerializeField] Transform projectileSpawn;
     private bool isJumping = false;
 
 
@@ -22,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         JumpInput();
-        Attack();
+        Actions();
     }
 
     private void JumpInput()
@@ -35,11 +37,15 @@ public class PlayerMovement : MonoBehaviour
         playerAnim.SetBool("isJumping", true);
     }
 
-    private void Attack()
+    private void Actions()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Debug.Log("ataca");
+            Instantiate(projectilePrefab, projectileSpawn.position, transform.rotation);
+            Debug.Log("Ataca");
+        }
+        if (Input.GetButtonDown("Fire2")) {
+            Debug.Log("Esquiva");
         }
     }
 
