@@ -14,7 +14,7 @@ public class SceneManager : MonoBehaviour
     }
 
     public void OnPlayButton() {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Play"); Debug.Log("Disfruta el juego");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Main"); Debug.Log("Disfruta el juego");
     }
 
     public void OnOptionsButton() {

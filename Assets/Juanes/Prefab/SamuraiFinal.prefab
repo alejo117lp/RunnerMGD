@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 562237373}
   - component: {fileID: 562237372}
   - component: {fileID: 562237371}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SamuraiFinal
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -51367383
-  m_SortingLayer: 2
+  m_SortingLayerID: 1695498297
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 765451456749629850, guid: a923f1969740a194183a5a0d1f95d512, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -168,7 +168,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: {x: 0, y: 6.5}
   isGrounded: 0
-  playerAnim: {fileID: 0}
+  playerAnim: {fileID: 2177604652574911964}
+  projectilePrefab: {fileID: 1866975010286232774, guid: 5a798fc087173a744be35b13146d03c6, type: 3}
+  projectileSpawn: {fileID: 9120057981480190551}
+  projectileCooldown: 1.5
+  isAvailable: 0
 --- !u!1 &8892243156321215976
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9120057981480190551}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
