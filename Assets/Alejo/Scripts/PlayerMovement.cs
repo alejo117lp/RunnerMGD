@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator playerAnim;
     [SerializeField] ProjectileBehaviour projectilePrefab;
     [SerializeField] Transform projectileSpawn;
+    [SerializeField] float projectileCooldown;
+    [SerializeField] private bool isAvailable;
     private bool isJumping = false;
 
 
@@ -20,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     {
         m_Rigidbody = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
+        isAvailable = true;
     }
     void Update()
     {
@@ -39,9 +42,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Actions()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && isAvailable == true)
         {
-            Instantiate(projectilePrefab, projectileSpawn.position, transform.rotation);           
+            Instantiate(projectilePrefab, projectileSpawn.position, transform.rotation);
+            isAvailable = false;
+            StartCoroutine(StartCooldown());
             Debug.Log("Ataca");
         }
         if (Input.GetButtonDown("Fire2")) {
@@ -60,4 +65,9 @@ public class PlayerMovement : MonoBehaviour
             playerAnim.SetBool("isJumping", false);
         }
     }
+
+    public IEnumerator StartCooldown() {
+            yield return new WaitForSeconds(projectileCooldown);
+            isAvailable = true;
+    }   
 }

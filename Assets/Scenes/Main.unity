@@ -320,7 +320,7 @@ PrefabInstance:
       objectReference: {fileID: 1866975010286232774, guid: 5a798fc087173a744be35b13146d03c6, type: 3}
     - target: {fileID: 562237371, guid: a425fd719319f4649a97d8ee406fde75, type: 3}
       propertyPath: projectileCooldown
-      value: 5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2177604652574911964, guid: a425fd719319f4649a97d8ee406fde75, type: 3}
       propertyPath: m_Enabled
