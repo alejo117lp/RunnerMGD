@@ -14,7 +14,7 @@ public class ProjectileBehaviour : MonoBehaviour
 
     void Update()
     {
-        transform.position += transform.right * Time.deltaTime * Speed;
+        transform.Translate(Vector2.right * Speed * Time.deltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

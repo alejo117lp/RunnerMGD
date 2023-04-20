@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Instantiate(projectilePrefab, projectileSpawn.position, transform.rotation);
+            Instantiate(projectilePrefab, projectileSpawn.position, transform.rotation);           
             Debug.Log("Ataca");
         }
         if (Input.GetButtonDown("Fire2")) {
