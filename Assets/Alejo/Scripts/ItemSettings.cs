@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class Section : MonoBehaviour
+public class ItemSettings : MonoBehaviour
 {
     [SerializeField] private float speed;
-    [SerializeField] float timeToDestroySection;
+    [SerializeField] float timeToDestroyItem;
 
     private void Start() {
         //StartCoroutine(DestroyPipe());
     }
 
     private void OnEnable() {
-        StartCoroutine(DestroySection());
+        StartCoroutine(DestroyItem());
     }
 
     private void Update(){
@@ -20,9 +21,8 @@ public class Section : MonoBehaviour
         transform.position += (Vector3.left * Time.deltaTime * speed);
     }
 
-    IEnumerator DestroySection() {
-        yield return new WaitForSeconds(timeToDestroySection);
+    IEnumerator DestroyItem() {
+        yield return new WaitForSeconds(timeToDestroyItem);
         gameObject.SetActive(false);
-
     }
 }
