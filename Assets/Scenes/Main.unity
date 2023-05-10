@@ -549,6 +549,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 562237372, guid: a425fd719319f4649a97d8ee406fde75, type: 3}
+      propertyPath: m_Size.y
+      value: 0.62406325
+      objectReference: {fileID: 0}
+    - target: {fileID: 562237372, guid: a425fd719319f4649a97d8ee406fde75, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.02357398
+      objectReference: {fileID: 0}
+    - target: {fileID: 562237372, guid: a425fd719319f4649a97d8ee406fde75, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 562237372, guid: a425fd719319f4649a97d8ee406fde75, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 562237373, guid: a425fd719319f4649a97d8ee406fde75, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2177604652574911965, guid: a425fd719319f4649a97d8ee406fde75, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -559,7 +579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2177604652574911965, guid: a425fd719319f4649a97d8ee406fde75, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -3.8
       objectReference: {fileID: 0}
     - target: {fileID: 2177604652574911965, guid: a425fd719319f4649a97d8ee406fde75, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1971,7 +1991,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 22.511482, y: -4.591899}
+  m_Offset: {x: 22.511482, y: -5.05}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1982,7 +2002,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 67.47734, y: 1.1042571}
+  m_Size: {x: 67.47734, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1 &1762731484
 GameObject:

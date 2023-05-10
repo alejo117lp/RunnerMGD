@@ -52,6 +52,14 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire2")) {
             Debug.Log("Esquiva");
         }
+        if (Input.GetKeyDown(KeyCode.W)) {
+            this.transform.position = new Vector3(-4f, -2.25f, 0f);
+            Debug.Log("Move");
+        }
+        if (Input.GetKeyDown(KeyCode.S)) {
+            this.transform.position = new Vector3(-5f, -3.8f, 0f);
+            Debug.Log("Move");
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
