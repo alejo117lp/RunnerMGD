@@ -6,7 +6,7 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreText;
-    private float scorePoints;
+    public float scorePoints;
 
     private void Update()
     {
