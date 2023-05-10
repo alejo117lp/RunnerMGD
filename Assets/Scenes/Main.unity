@@ -279,7 +279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &146673237
 RectTransform:
   m_ObjectHideFlags: 0
@@ -397,7 +397,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Current Score:'
+  m_text: 'SCORE: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b65c74069af04a145b6bd432322046c5, type: 2}
   m_sharedMaterial: {fileID: 1402014163022644690, guid: b65c74069af04a145b6bd432322046c5, type: 2}
@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Restaurar
+  m_text: RESTART
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b65c74069af04a145b6bd432322046c5, type: 2}
   m_sharedMaterial: {fileID: 1402014163022644690, guid: b65c74069af04a145b6bd432322046c5, type: 2}
@@ -1668,7 +1668,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Record:'
+  m_text: 'HIGHSCORE: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b65c74069af04a145b6bd432322046c5, type: 2}
   m_sharedMaterial: {fileID: 1402014163022644690, guid: b65c74069af04a145b6bd432322046c5, type: 2}
