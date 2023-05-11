@@ -13,13 +13,13 @@ public class RecordScoreController : MonoBehaviour
 
     private void Start()
     {
-        recordScoreText.text = "Record Score: " + Mathf.Round(PlayerPrefs.GetFloat("RecordScore", 0));
+        recordScoreText.text = "HIGHSCORE:  " + Mathf.Round(PlayerPrefs.GetFloat("RecordScore", 0));
     }
 
-    private void Update()
+    /*private void Update()
     {
         if(Input.GetKeyDown(KeyCode.M)) ShowScores();
-    }
+    }*/
 
     public void ShowScores()
     {
@@ -28,7 +28,7 @@ public class RecordScoreController : MonoBehaviour
         if (_scoreManager.scorePoints > PlayerPrefs.GetFloat("RecordScore", 0))
         {
             PlayerPrefs.SetFloat("RecordScore", _scoreManager.scorePoints);
-            recordScoreText.text = "Record Score: " + Mathf.Round(_scoreManager.scorePoints);
+            recordScoreText.text = "HIGHSCORE: " + Mathf.Round(_scoreManager.scorePoints);
         }
         
     }
@@ -36,6 +36,6 @@ public class RecordScoreController : MonoBehaviour
     public void DeleteData()
     {
         PlayerPrefs.DeleteKey("RecordScore");
-        recordScoreText.text = "Record Score: 0";
+        recordScoreText.text = "HIGHSCORE:  0";
     }
 }
