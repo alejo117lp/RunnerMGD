@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6360796961788697596}
   - component: {fileID: 1866975010286232774}
-  - component: {fileID: 529112019225341992}
   - component: {fileID: 113312074802295670}
   - component: {fileID: 917948286519958877}
-  m_Layer: 0
+  - component: {fileID: -6569608835447973895}
+  - component: {fileID: 4050478323337343454}
+  m_Layer: 6
   m_Name: Shuriken
-  m_TagString: Untagged
+  m_TagString: Shuriken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,19 +49,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 20
   destoyTime: 1
---- !u!135 &529112019225341992
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2449426447994892308}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.45
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &113312074802295670
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -128,3 +116,31 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!58 &-6569608835447973895
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2449426447994892308}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2
+--- !u!114 &4050478323337343454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2449426447994892308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a1a1445827d3d644b361fc552142fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

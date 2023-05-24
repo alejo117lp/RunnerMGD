@@ -8,10 +8,6 @@ public class ItemSettings : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] float timeToDestroyItem;
 
-    private void Start() {
-        //StartCoroutine(DestroyPipe());
-    }
-
     private void OnEnable() {
         StartCoroutine(DestroyItem());
     }
