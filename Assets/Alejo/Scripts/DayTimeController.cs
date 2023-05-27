@@ -10,7 +10,7 @@ public class DayTimeController : MonoBehaviour
     [SerializeField] Sprite nightSkay;
 
     [Header("Box Sprites")]
-    [SerializeField] SpriteRenderer boxRenderer;
+    [SerializeField] GameObject box;
     [SerializeField] Sprite dayBox;
     [SerializeField] Sprite nightBox;
 
@@ -24,25 +24,42 @@ public class DayTimeController : MonoBehaviour
     [SerializeField] Sprite dayGround;
     [SerializeField] Sprite nightGround;
 
-
+    SpriteRenderer boxRenderer;
     SpriteRenderer[] treesRenderer;
     SpriteRenderer[] groundRenderer;
+    Transform[] groundTransform;
+    Transform[] treesTransform;
+    Transform boxTransform;
+    BoxCollider2D boxCollider;
 
     private void Awake() {
         treesRenderer = trees.GetComponentsInChildren<SpriteRenderer>();
         groundRenderer= ground.GetComponentsInChildren<SpriteRenderer>();
+        groundTransform = ground.GetComponentsInChildren<Transform>();
+        treesTransform = trees.GetComponentsInChildren<Transform>();
+        boxRenderer = box.GetComponent<SpriteRenderer>();
+        boxTransform = box.GetComponent<Transform>();
+        boxCollider= box.GetComponent<BoxCollider2D>();
 
         int random = Random.Range(0, 2); // Night = 0, Day = 1.
 
         if(random == 0) {
             for(int i = 0; i < treesRenderer.Length; i++) {
                 treesRenderer[i].sprite = treesOnNight[i];
+                treesTransform[i + 1].position = new Vector3(treesTransform[i + 1].position.x,
+                   0.8f, treesTransform[i + 1].position.z);
             }
 
             for (int i = 0; i < groundRenderer.Length; i++) {
                 groundRenderer[i].sprite = nightGround;
+                groundTransform[i+1].position = new Vector3(groundTransform[i+1].position.x, 
+                    -3.97f, groundTransform[i + 1].position.z);
+                groundTransform[i + 1].localScale = new Vector3(groundTransform[i + 1].localScale.x,
+                    -3.3f, groundTransform[i + 1].localScale.z);
             }
 
+            boxTransform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            boxCollider.size = new Vector2(2.7f, 2.7f);
             skyRenderer.sprite = nightSkay;
             boxRenderer.sprite = nightBox;
         }
