@@ -75,6 +75,8 @@ public class DayTimeController : MonoBehaviour
 
             skyRenderer.sprite = daySkay;
             boxRenderer.sprite = dayBox;
+            boxTransform.localScale = new Vector3(1f, 1f, 1f);
+            boxCollider.size = new Vector2(1.4f, 1.4f);
         }
     }
 }
