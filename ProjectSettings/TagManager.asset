@@ -8,6 +8,8 @@ TagManager:
   - FinalPoint
   - Box
   - Shuriken
+  - PowerUp
+  - Enemy
   layers:
   - Default
   - TransparentFX

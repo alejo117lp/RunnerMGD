@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShurikenAttack : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("Box")) {
+        if (collision.gameObject.CompareTag("Enemy")) {
             Debug.Log("DESTRUIR CAJA");
             gameObject.SetActive(false);
         }
