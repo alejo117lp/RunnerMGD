@@ -6,11 +6,12 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreText;
+    public float rateScore = 2f;
     public float scorePoints;
 
     private void Update()
     {
-        scorePoints += 2 * Time.deltaTime;
+        scorePoints += rateScore * Time.deltaTime;
         scoreText.text = "SCORE:  " + UnityEngine.Mathf.Round(scorePoints);
     }
 

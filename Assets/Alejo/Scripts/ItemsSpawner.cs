@@ -10,7 +10,7 @@ public class ItemsSpawner : MonoBehaviour
     private Transform spawnPoint;
     [SerializeField]
     private float timeToSpawnFirstItem;
-    [SerializeField, Range(0.1f, 10)]
+    [SerializeField, Range(0.1f, 50)]
     private float minTimeToSpawnItem, maxTimeToSpawnItem;
     //[SerializeField] private float timeToSpawnItem;
 
