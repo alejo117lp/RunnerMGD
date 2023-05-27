@@ -13,7 +13,7 @@ public class Parallax : MonoBehaviour
         material = GetComponent<SpriteRenderer>().material;
     }
 
-    private void update()
+    private void Update()
     {
         offeset = velocidadMovimiento * Time.deltaTime;
         material.mainTextureOffset += offeset;
